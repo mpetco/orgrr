@@ -26,6 +26,8 @@
 ;; I'm still a novice
 ;;
 
+(require 'orgrr)
+
 (defun orgrr-hi-change-zettel (&optional new-zettel old-zettel)
   "Change the prefix of a zettel across all notes"
   (interactive)
