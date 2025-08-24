@@ -980,7 +980,7 @@ selected file name does not exist, a new one is created."
 	(when (orgrr-on-macos-p)
 	  (setq filename (ucs-normalize-HFS-NFD-string filename)))
 	(orgrr-open-file (concat filename ".org"))
-	(insert (concat "#+title: " selection "\n"))))))
+	(insert (concat "#+title: " selection "\n#+roam_alias: \n#+roam_tags: draft\n#+roam_key: \n"))))))
 
 (defun orgrr-global-find ()
   "A simple wrapper for a global orgrr-find."
@@ -1562,7 +1562,7 @@ patient."
 
 (defun orgrr-read-zettel-parent (zettel)
   "Returns parent zettel of current-zettel."
- (if (and zettel (string-match "\\(.*?\\)\\([0-9]+\\|[a-zA-Z]+\\)$" zettel))
+ (if (and zettel (string-match "\(.*?\)\([0-9]+|[a-zA-Z]+\)$" zettel)) ;;again maybe make this a bit more general? so one could use dots, check emacs/functions or similar it shows that is the parent rather then emacs/
       (match-string 1 zettel)
     zettel))
 
