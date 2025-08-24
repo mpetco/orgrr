@@ -111,4 +111,7 @@
       (browse-url
        (completing-read "Select link to open: " roam-keys)))))
 
+(provide 'orgrr-hi)
 ;; a frined property perhaps? roam_friend? and a show friends functions?
+
+;; orgrr-hi.el ends here
