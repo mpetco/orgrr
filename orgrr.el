@@ -87,6 +87,7 @@
 (require 'ucs-normalize)
 (require 'org)
 (require 'json)
+(load "./orgrr-hi.el")
 
 (defvar orgrr-window-management "single-window")
 (defvar orgrr-quick-add-token "quicknote")
